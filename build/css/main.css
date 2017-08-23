@@ -943,7 +943,27 @@ template {
     letter-spacing: 1.2px; }
 
 .map {
-  -webkit-filter: brightness(30%);
-  filter: brightness(30%); }
+  -webkit-filter: brightness(60%);
+  filter: brightness(60%);
+  margin: 0;
+  padding: 0; }
+
+.footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 115px;
+  background-color: #222;
+  color: #fff; }
+  .footer .container {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
 
 /*# sourceMappingURL=main.css.map */
