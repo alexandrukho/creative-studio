@@ -435,6 +435,20 @@ template {
   font-weight: bold; }
 
 .wrapper-top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 880px;
   background: url("../images/bg-header.jpg") no-repeat; }
 
@@ -496,5 +510,37 @@ template {
     transition: 0.3s; }
     .social-link:hover {
       color: #11749e; }
+
+.banner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  text-transform: uppercase; }
+  .banner-text {
+    color: #fff;
+    margin: 0;
+    font-size: 150px;
+    font-size: 9.375rem; }
+  .banner-text__sub {
+    color: #11749e;
+    margin: 0;
+    font-size: 20px;
+    font-size: 1.25rem;
+    letter-spacing: 20px; }
 
 /*# sourceMappingURL=main.css.map */

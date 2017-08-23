@@ -1,0 +1,19 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  text-transform: uppercase;
+  &-text {
+    color: $color-white;
+    margin: 0;
+    @include fontSize(150px);
+  }
+  &-text__sub {
+    color: $color-blue;
+    margin: 0;
+    @include fontSize(20px);
+    letter-spacing: 20px;
+  }
+}
