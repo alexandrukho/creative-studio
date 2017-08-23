@@ -28,9 +28,9 @@
     height: 100px;
   }
   &-heading {
-    @include fontSize(18px);
-    text-transform: uppercase;
-  }
+     @include fontSize(18px);
+     text-transform: uppercase;
+   }
   &-text {
     line-height: 22px;
   }
