@@ -16,4 +16,26 @@
     @include fontSize(20px);
     letter-spacing: 20px;
   }
+  &-scroll {
+    width: 75px;
+    height: 80px;
+    margin: 15px auto;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid $color-white;
+    transition: $transition-speed;
+    outline: none;
+    &:hover {
+      border: 2px solid $color-blue;
+      color: $color-blue;
+      transition: translateY $transition-speed;
+      .banner-scroll__arrow {
+        transition-duration: 0.5s;
+        transform: translateY(5px);
+      }
+    }
+  }
+
 }

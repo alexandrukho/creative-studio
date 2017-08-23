@@ -1,0 +1,54 @@
+.feature {
+  height: 740px;
+  background-color: $color-blue;
+  color: $color-white;
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  &-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 270px;
+    justify-content: center;
+  }
+  &-icon {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid lighten($color-blue, 20%);
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+  }
+  &-heading {
+    @include fontSize(18px);
+    text-transform: uppercase;
+  }
+  &-text {
+    line-height: 22px;
+  }
+}
+
+.section-heading {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 170px;
+  padding-bottom: 100px;
+  @include fontSize(37px);
+  z-index: 2;
+  &:before {
+    content: 'W';
+    @include centerer-xy();
+    @include fontSize(175px);
+    z-index: 1;
+    color: rgba(255,255,255,0.1);
+  }
+}
