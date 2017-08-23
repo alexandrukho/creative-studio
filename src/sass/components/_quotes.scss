@@ -1,0 +1,17 @@
+.quotes {
+  display: flex;
+  min-height: 355px;
+  background-color: $color-blue;
+  color: $color-white;
+  .container {
+    align-self: center;
+  }
+  &-block {
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+  &-icon {
+    margin: 0 20px;
+  }
+}

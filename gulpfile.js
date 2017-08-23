@@ -24,7 +24,7 @@ gulp.task('minify-image', () =>
         .pipe(imagemin([
             imagemin.gifsicle({interlaced: true}),
             imagemin.jpegtran({progressive: true}),
-            imagemin.optipng({optimizationLevel: 2})
+            imagemin.optipng({optimizationLevel: 4})
         ]))
         .pipe(gulp.dest('build/images'))
 );
