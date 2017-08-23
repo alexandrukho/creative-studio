@@ -942,4 +942,8 @@ template {
     font-weight: bold;
     letter-spacing: 1.2px; }
 
+.map {
+  -webkit-filter: brightness(30%);
+  filter: brightness(30%); }
+
 /*# sourceMappingURL=main.css.map */
