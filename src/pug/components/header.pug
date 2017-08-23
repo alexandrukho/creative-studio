@@ -1,0 +1,20 @@
+- var navList = ['home', 'pages', 'features', 'extensions', 'tutorials', 'contact us']
+
+header.header
+    .container
+        .header-logo
+            img(src="images/logo.png" alt="logotype")
+        nav.nav
+            ul.nav-list
+                each nameLink in navList
+                    li.nav-item
+                        a(href="#").nav-link= nameLink
+            .social
+                a(href='facebook.com').social-link
+                    i(class='fa fa-lg fa-facebook').social-link__image
+                a(href='twitter.com').social-link
+                    i(class='fa fa-lg fa-twitter').social-link__image
+                a(href='skype.com').social-link
+                    i(class='fa fa-lg fa-skype').social-link__image
+                a(href='instagram.com').social-link
+                    i(class='fa fa-lg fa-instagram').social-link__image

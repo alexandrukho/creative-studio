@@ -1,0 +1,40 @@
+.header {
+  height: 115px;
+  border-bottom: 1px solid #838383;
+  .container {
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  &-list {
+    display: flex;
+    align-items: center;
+  }
+  &-link {
+    @include fontSize(17px);
+    padding: 10px 24px;
+    color: $color-white;
+    text-transform: capitalize;
+    transition: $transition-speed;
+    &:hover {
+      color: $color-blue;
+    }
+  }
+}
+.social {
+  display: flex;
+  &-link {
+    padding: 15px;
+    color: $color-white;
+    transition: $transition-speed;
+    &:hover {
+      color: $color-blue;
+    }
+  }
+}

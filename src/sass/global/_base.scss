@@ -1,0 +1,25 @@
+@import "var";
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: $font-main;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  padding: 0 15px;
+  max-width: 1200px;
+}

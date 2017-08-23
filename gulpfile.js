@@ -4,6 +4,7 @@ const gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
+    imagemin = require('gulp-imagemin'),
     browserSync = require('browser-sync').create();
 
 //path
@@ -18,17 +19,17 @@ let path = {
     htmlWatch: './build/*.html',
     serveDir: './build/'//for server html look
 };
-
-//tasks
-// gulp.task('min-css', function () {
-//     gulp.src(path.styleDist + '/*.css')
-//         .pipe(cssmin())
-//         .pipe(rename({suffix: '.min'}))
-//         .pipe(gulp.dest('app/css/'));
-// });
+gulp.task('minify-image', () =>
+    gulp.src('src/images/*')
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 2})
+        ]))
+        .pipe(gulp.dest('build/images'))
+);
 
 gulp.task('pug', function () {
-    //noinspection JSUnresolvedFunction
     gulp.src(path.pug)
         .pipe(pug({
             pretty: true
@@ -50,16 +51,6 @@ gulp.task('sass', function () {
         .pipe(browserSync.reload({stream: true}));
 });
 
-/*gulp.task('compress', function (cb) {
-    pump([
-            gulp.src(path.jsWatch),
-            uglify(),
-            gulp.dest(path.jsDist)
-        ],
-        cb
-    );
-});*/
-
 //server task
 gulp.task('serve', function () {
     browserSync.init({
@@ -76,4 +67,4 @@ gulp.task('watch', function () {
     gulp.watch(path.htmlWatch).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['pug', 'watch', 'sass', 'serve']);
+gulp.task('default', ['pug', 'watch', 'sass', 'minify-image', 'serve']);
