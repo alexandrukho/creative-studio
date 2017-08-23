@@ -1,0 +1,42 @@
+.blog {
+  @extend .feature;
+  background-color: $color-white;
+  color: $color-black;
+  height: auto;
+  &-section__heading {
+    text-transform: uppercase;
+    &:before {
+      content: 'B';
+      @include centerer-xy();
+      @include fontSize(175px);
+      z-index: 1;
+      color: $color-black;
+      opacity: 0.15;
+    }
+  }
+  &-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  &-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 15px 10px 0;
+    max-width: 270px;
+    justify-content: center;
+  }
+  &-img {
+    @extend .feature-icon;
+    width: 100%;
+    height: 280px;
+    border: none;
+    border-radius: inherit;
+  }
+  &-heading {
+    @extend .feature-heading;
+    color: $color-blue;
+    margin: 30px 0 0;
+  }
+}
