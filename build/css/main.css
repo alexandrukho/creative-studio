@@ -1028,7 +1028,7 @@ template {
 .form {
   margin-top: 50px;
   background: url("../images/bg-form.jpg") no-repeat;
-  background-size: 100%; }
+  background-size: cover; }
   .form-section__heading {
     text-transform: uppercase; }
     .form-section__heading:before {
@@ -1056,7 +1056,14 @@ template {
     -ms-flex-pack: justify;
     justify-content: space-between;
     margin-bottom: 40px; }
-  .form-input, .form-textarea {
+    @media (max-width: 768px) {
+      .form-inputs {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; } }
+  .form-input {
     -webkit-flex-basis: 370px;
     -ms-flex-preferred-size: 370px;
     flex-basis: 370px;
@@ -1064,16 +1071,32 @@ template {
     background-color: transparent;
     border: 1px solid #fff;
     color: #fff; }
-    .form-input::-webkit-input-placeholder, .form-textarea::-webkit-input-placeholder {
+    @media (max-width: 768px) {
+      .form-input {
+        -webkit-flex-basis: inherit;
+        -ms-flex-preferred-size: inherit;
+        flex-basis: inherit;
+        margin: 20px 0; } }
+    .form-input::-webkit-input-placeholder {
       color: #fff; }
-    .form-input:-ms-input-placeholder, .form-textarea:-ms-input-placeholder {
+    .form-input:-ms-input-placeholder {
       color: #fff; }
-    .form-input::placeholder, .form-textarea::placeholder {
+    .form-input::placeholder {
       color: #fff; }
   .form-textarea {
     width: 100%;
     height: 150px;
-    resize: none; }
+    resize: none;
+    background-color: transparent;
+    padding: 22px 20px;
+    border: 1px solid #fff;
+    color: #fff; }
+    .form-textarea::-webkit-input-placeholder {
+      color: #fff; }
+    .form-textarea:-ms-input-placeholder {
+      color: #fff; }
+    .form-textarea::placeholder {
+      color: #fff; }
   .form-button {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
@@ -1089,6 +1112,9 @@ template {
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 1.2px; }
+    @media (max-width: 1070px) {
+      .form-button {
+        margin-bottom: 40px; } }
 
 .map {
   -webkit-filter: brightness(60%);
