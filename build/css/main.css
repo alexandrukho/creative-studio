@@ -450,7 +450,8 @@ template {
   -ms-flex-pack: center;
   justify-content: center;
   height: 880px;
-  background: url("../images/bg-header.jpg") no-repeat; }
+  background: url("../images/bg-header.jpg") no-repeat;
+  background-size: cover; }
 
 .header {
   position: relative;
@@ -600,9 +601,18 @@ template {
     margin: 0;
     font-size: 150px;
     font-size: 9.375rem; }
+    @media (max-width: 1070px) {
+      .banner-text {
+        font-size: 120px;
+        font-size: 7.5rem; } }
+    @media (max-width: 768px) {
+      .banner-text {
+        font-size: 60px;
+        font-size: 3.75rem; } }
   .banner-text__sub {
     color: #11749e;
-    margin: 0;
+    margin: 0 auto;
+    text-align: center;
     font-size: 20px;
     font-size: 1.25rem;
     letter-spacing: 20px; }

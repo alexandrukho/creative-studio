@@ -37,7 +37,7 @@ $desktop-s: 768px;
 $desktop-l: 1070px;
 
 @mixin tablet {
-  @media (max-width: #{$desktop-l}){
+  @media (max-width: #{$desktop-s}){
     @content;
   }
 }

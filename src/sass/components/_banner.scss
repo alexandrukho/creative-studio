@@ -9,10 +9,17 @@
     color: $color-white;
     margin: 0;
     @include fontSize(150px);
+    @include desktop {
+      @include fontSize(120px);
+    }
+    @include tablet {
+      @include fontSize(60px);
+    }
   }
   &-text__sub {
     color: $color-blue;
-    margin: 0;
+    margin: 0 auto;
+    text-align: center;
     @include fontSize(20px);
     letter-spacing: 20px;
   }
