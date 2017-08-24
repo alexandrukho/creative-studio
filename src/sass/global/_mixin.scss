@@ -28,3 +28,27 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+
+//MEDIA
+$mobile-s: 320px;
+$mobile-l: 620px;
+$desktop-s: 768px;
+$desktop-l: 1070px;
+
+@mixin tablet {
+  @media (max-width: #{$desktop-l}){
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$mobile-l}){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$desktop-l}) {
+    @content;
+  }
+}

@@ -1,10 +1,39 @@
 .header {
+  position: relative;
   height: 115px;
   border-bottom: 1px solid #838383;
+  @include desktop {
+    height: auto;
+  }
+
   .container {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    .nav-button {
+      display: none;
+    }
+    @include desktop {
+      justify-content: center;
+      flex-direction: column;
+      .header-logo {
+        margin: 20px 0;
+      }
+
+    }
+    @include mobile {
+      align-items: flex-start;
+      .header-logo {
+        display: none;
+      }
+      .nav-button {
+        display: block;
+        color: #fff;
+        cursor: pointer;
+        z-index: 100;
+      }
+      min-height: 60px;
+    }
   }
 }
 
@@ -15,6 +44,21 @@
   &-list {
     display: flex;
     align-items: center;
+    padding: 0;
+    @include mobile {
+      position: absolute;
+      width: 100%;
+      display: none;
+      left: 0;
+      top: 0;
+      text-align: center;
+      margin-top: 60px;
+      background-color: rgba(255,255,255, 0.97);
+      &__active {
+        display: block;
+      }
+    }
+
   }
   &-link {
     @include fontSize(17px);
@@ -22,6 +66,19 @@
     color: $color-white;
     text-transform: capitalize;
     transition: $transition-speed;
+    @include desktop {
+      @include fontSize(14px);
+      padding: 12px 16px;
+    }
+    @include mobile {
+      color: $color-black;
+      width: 100%;
+      display: block;
+      padding: 16px 0;
+      &:hover {
+        background-color: #d1d1d1;
+      }
+    }
     &:hover {
       color: $color-blue;
     }
@@ -29,6 +86,11 @@
 }
 .social {
   display: flex;
+  @include desktop {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
   &-link {
     padding: 15px;
     color: $color-white;
