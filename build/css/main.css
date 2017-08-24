@@ -747,6 +747,10 @@ template {
   font-size: 37px;
   font-size: 2.3125rem;
   z-index: 2; }
+  @media (max-width: 768px) {
+    .section-heading, .team .team-section__heading {
+      padding-top: 50px;
+      padding-bottom: 75px; } }
   .section-heading:before, .team .team-section__heading:before {
     content: 'W';
     position: absolute;
@@ -922,10 +926,20 @@ template {
   min-height: 355px;
   background-color: #11749e;
   color: #fff; }
+  @media (max-width: 768px) {
+    .quotes {
+      min-height: 250px; } }
   .quotes .container {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center; }
+    @media (max-width: 768px) {
+      .quotes .container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; } }
   .quotes-block {
     display: -webkit-box;
     display: -webkit-flex;
@@ -936,6 +950,9 @@ template {
     -ms-flex-align: center;
     align-items: center;
     width: 50%; }
+    @media (max-width: 768px) {
+      .quotes-block {
+        width: 100%; } }
   .quotes-icon {
     margin: 0 20px; }
 

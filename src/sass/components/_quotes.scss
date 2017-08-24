@@ -3,13 +3,22 @@
   min-height: 355px;
   background-color: $color-blue;
   color: $color-white;
+  @include tablet {
+    min-height: 250px;
+  }
   .container {
     align-self: center;
+    @include tablet {
+      flex-direction: column;
+    }
   }
   &-block {
     display: flex;
     align-items: center;
     width: 50%;
+    @include tablet {
+      width: 100%;
+    }
   }
   &-icon {
     margin: 0 20px;
