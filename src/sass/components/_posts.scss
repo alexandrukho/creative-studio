@@ -11,15 +11,25 @@
     width: 450px;
     @include fontSize(13px);
     margin: 15px 0;
+    @include desktop {
+      width: auto;
+    }
   }
   &-left {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     width: 50%;
+    @include desktop {
+      width: auto;
+      padding-right: 20px;
+    }
   }
   &-right {
     width: 50%;
+    @include tablet {
+      display: none;
+    }
   }
   &-img {
     width: 100%;
@@ -46,11 +56,17 @@
     font-size: 20px;
     margin: 10px 0;
     text-transform: uppercase;
+    @include tablet {
+      width: auto;
+    }
   }
   &-text {
     width: 450px;
     margin: 0 25px;
     line-height: 25px;
     letter-spacing: 1.1px;
+    @include tablet {
+      width: auto;
+    }
   }
 }
