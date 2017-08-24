@@ -644,7 +644,7 @@ template {
         transform: translateY(5px); }
 
 .feature, .blog, .team, .form {
-  height: 740px;
+  min-height: 740px;
   background-color: #11749e;
   color: #fff; }
   .feature .container, .blog .container, .team .container, .form .container {
@@ -665,7 +665,16 @@ template {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-    justify-content: space-between; }
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    @media (max-width: 620px) {
+      .feature-list {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center; } }
   .feature-card {
     display: -webkit-box;
     display: -webkit-flex;
@@ -681,7 +690,8 @@ template {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    padding: 10px 15px; }
   .feature-icon, .blog-img {
     display: -webkit-box;
     display: -webkit-flex;
@@ -702,12 +712,25 @@ template {
     border-radius: 50px;
     width: 100px;
     height: 100px; }
+    @media (max-width: 620px) {
+      .feature-icon, .blog-img {
+        width: 80px;
+        height: 80px; } }
   .feature-heading, .blog-heading {
     font-size: 18px;
     font-size: 1.125rem;
     text-transform: uppercase; }
+    @media (max-width: 620px) {
+      .feature-heading, .blog-heading {
+        font-size: 16px;
+        font-size: 1rem;
+        margin: 20px 0 0; } }
   .feature-text {
     line-height: 22px; }
+    @media (max-width: 620px) {
+      .feature-text {
+        font-size: 14px;
+        font-size: 0.875rem; } }
 
 .section-heading, .team .team-section__heading {
   position: relative;
@@ -736,6 +759,10 @@ template {
     font-size: 10.9375rem;
     z-index: 1;
     color: rgba(255, 255, 255, 0.1); }
+  @media (max-width: 620px) {
+    .section-heading, .team .team-section__heading {
+      font-size: 23px;
+      font-size: 1.4375rem; } }
 
 .posts {
   display: -webkit-box;

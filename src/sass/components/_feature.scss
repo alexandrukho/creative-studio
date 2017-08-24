@@ -1,5 +1,5 @@
 .feature {
-  height: 740px;
+  min-height: 740px;
   background-color: $color-blue;
   color: $color-white;
   .container {
@@ -9,6 +9,10 @@
   &-list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    @include mobile {
+      justify-content: center;
+    }
   }
   &-card {
     display: flex;
@@ -16,6 +20,7 @@
     text-align: center;
     max-width: 270px;
     justify-content: center;
+    padding: 10px 15px;
   }
   &-icon {
     display: flex;
@@ -26,13 +31,24 @@
     border-radius: 50px;
     width: 100px;
     height: 100px;
+    @include mobile {
+      width: 80px;
+      height: 80px;
+    }
   }
   &-heading {
      @include fontSize(18px);
      text-transform: uppercase;
+    @include mobile {
+      @include fontSize(16px);
+      margin: 20px 0 0;
+    }
    }
   &-text {
     line-height: 22px;
+    @include mobile {
+      @include fontSize(14px);
+    }
   }
 }
 
@@ -50,5 +66,8 @@
     @include fontSize(175px);
     z-index: 1;
     color: rgba(255,255,255,0.1);
+  }
+  @include mobile {
+    @include fontSize(23px);
   }
 }
