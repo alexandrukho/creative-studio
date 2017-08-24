@@ -971,6 +971,11 @@ template {
     font-size: 25px;
     font-size: 1.5625rem;
     text-align: center; }
+    @media (max-width: 768px) {
+      .team-subtitle {
+        font-size: 20px;
+        font-size: 1.25rem;
+        padding-bottom: 20px; } }
   .team-list {
     display: -webkit-box;
     display: -webkit-flex;
@@ -979,10 +984,19 @@ template {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around; }
+    @media (max-width: 1070px) {
+      .team-list {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
   .team-card {
     position: relative;
     width: 270px;
-    height: 415px; }
+    height: 415px;
+    margin: auto 5px; }
+    @media (max-width: 1070px) {
+      .team-card {
+        margin: 20px 0; } }
   .team-img {
     width: 100%;
     height: 100%; }

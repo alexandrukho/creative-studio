@@ -16,15 +16,26 @@
   &-subtitle {
     @include fontSize(25px);
     text-align: center;
+    @include tablet {
+      @include fontSize(20px);
+      padding-bottom: 20px;
+    }
   }
   &-list {
     display: flex;
     justify-content: space-around;
+    @include desktop {
+      flex-wrap: wrap;
+    }
   }
   &-card {
     position: relative;
     width: 270px;
     height: 415px;
+    margin: auto 5px;
+    @include desktop {
+      margin: 20px 0;
+    }
   }
   &-img {
     width: 100%;
